@@ -1,0 +1,27 @@
+{
+	"name": "@undreeew/compare-versions",
+	"version": "1.0.0",
+	"main": "build/index.js",
+	"types": "build/index.d.ts",
+	"files": [
+		"build/**/*",
+		"index.js"
+	],
+	"scripts": {
+		"clean": "del build",
+		"build": "npm run clean && tsc",
+		"pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"del-cli": "^5.1.0",
+		"typescript": "^5.5.4"
+	},
+	"dependencies": {
+		"@types/lodash": "^4.17.7",
+		"lodash": "^4.17.21"
+	}
+}
